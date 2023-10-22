@@ -28,3 +28,9 @@ To run your project, navigate to the directory and run one of the following npm 
 - npm run ios
 - npm run web
 ```
+
+# Run expo
+
+1. npx expo start
+2. Log in to expot with `npx expo login`
+3. Run expo app on my phone
