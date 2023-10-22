@@ -3,18 +3,19 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <Text>my name is seop</Text>
-            <StatusBar style="light" />
+        <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, backgroundColor: "teal" }}></View>
+            <View
+                style={{
+                    flex: 1,
+                    backgroundColor: "orange",
+                    flexDirection: "row",
+                }}
+            >
+                <View style={{ flex: 1, backgroundColor: "blue" }}></View>
+                <View style={{ flex: 1, backgroundColor: "black" }}></View>
+            </View>
+            <View style={{ flex: 1, backgroundColor: "pink" }}></View>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#000",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
