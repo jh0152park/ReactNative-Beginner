@@ -34,3 +34,15 @@ To run your project, navigate to the directory and run one of the following npm 
 1. npx expo start
 2. Log in to expot with `npx expo login`
 3. Run expo app on my phone
+
+# React Native Doc
+
+https://reactnative.dev/docs/0.60/components-and-apis
+
+# React Native Directory
+
+https://reactnative.directory/
+
+# Expo Doc
+
+https://docs.expo.dev/versions/latest/
