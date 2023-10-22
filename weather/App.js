@@ -1,10 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
+
+const { height: DISPLAY_HEIGHT, width: DISPLAY_WIDTH } =
+    Dimensions.get("window");
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "skyblue",
+        backgroundColor: "whitesmoke",
     },
 
     city: {
@@ -20,17 +23,19 @@ const styles = StyleSheet.create({
     },
 
     weather: {
-        flex: 4,
+        // flex: 4,
+        // backgroundColor: "green",
     },
 
     day: {
-        flex: 1,
+        // flex: 1,
+        width: DISPLAY_WIDTH,
         justifyContent: "flex-start",
         alignItems: "center",
     },
 
     temperature: {
-        marginTop: 20,
+        // marginTop: 50,
         fontSize: 150,
         fontWeight: "bold",
     },
@@ -47,12 +52,33 @@ export default function App() {
             <View style={styles.city}>
                 <Text style={styles.cityName}>Seoul</Text>
             </View>
-            <View style={styles.weather}>
+            <ScrollView
+                contentContainerStyle={styles.weather}
+                horizontal
+                pagingEnabled
+                showsHorizontalScrollIndicator={false}
+            >
                 <View style={styles.day}>
                     <Text style={styles.temperature}>27</Text>
                     <Text style={styles.description}>Sunny</Text>
                 </View>
-            </View>
+                <View style={styles.day}>
+                    <Text style={styles.temperature}>27</Text>
+                    <Text style={styles.description}>Sunny</Text>
+                </View>
+                <View style={styles.day}>
+                    <Text style={styles.temperature}>27</Text>
+                    <Text style={styles.description}>Sunny</Text>
+                </View>
+                <View style={styles.day}>
+                    <Text style={styles.temperature}>27</Text>
+                    <Text style={styles.description}>Sunny</Text>
+                </View>
+                <View style={styles.day}>
+                    <Text style={styles.temperature}>27</Text>
+                    <Text style={styles.description}>Sunny</Text>
+                </View>
+            </ScrollView>
         </View>
     );
 }
