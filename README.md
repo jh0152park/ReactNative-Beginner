@@ -50,3 +50,8 @@ https://docs.expo.dev/versions/latest/
 # Expo ICons FYI
 
 https://icons.expo.fyi/Index
+
+
+# Working Video
+
+https://github.com/jh0152park/ReactNative-Beginner_Weather/assets/118165975/d44921e3-1317-44ee-abcc-196f5ba7b6c3
