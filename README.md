@@ -46,3 +46,7 @@ https://reactnative.directory/
 # Expo Doc
 
 https://docs.expo.dev/versions/latest/
+
+# Expo ICons FYI
+
+https://icons.expo.fyi/Index
