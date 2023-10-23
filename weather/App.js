@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import {
     ActivityIndicator,
@@ -9,6 +8,7 @@ import {
     View,
 } from "react-native";
 import * as Location from "expo-location";
+import { Fontisto } from "@expo/vector-icons";
 
 const { height: DISPLAY_HEIGHT, width: DISPLAY_WIDTH } =
     Dimensions.get("window");
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
 
     city: {
-        flex: 0.8,
+        flex: 1,
         justifyContent: "center",
         alignItems: "center",
     },
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         fontWeight: "bold",
         marginTop: -20,
+        color: "tomato",
     },
     loading: {
         fontSize: 20,
@@ -61,7 +62,22 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "bold",
     },
+    icon: {
+        marginTop: 50,
+        fontSize: 120,
+        color: "tomato",
+    },
 });
+
+const WEATHER_ICON = {
+    Thunderstorm: "lightnings",
+    Drizzle: "day-rain",
+    Rain: "rains",
+    Snow: "snows",
+    Atmosphere: "cloudy-gusts",
+    Clear: "day-sunny",
+    Clouds: "cloudy",
+};
 
 const API_KEY = "476871574759c85c661f9c6f56a5e0b7";
 
@@ -160,6 +176,11 @@ export default function App() {
                             <Text style={styles.subDescription}>
                                 {weather.date.split(" ")[0]}
                             </Text>
+                            <Fontisto
+                                style={styles.icon}
+                                name={WEATHER_ICON[weather.weather]}
+                                size={24}
+                            />
                         </View>
                     ))
                 ) : (
